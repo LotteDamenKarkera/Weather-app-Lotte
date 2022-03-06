@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SheCodes</title>
+		<link rel="stylesheet" href="styles.css"/>
+		<script src="https://kit.fontawesome.com/5ffee6b918.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header> 
+		<br>
+			<div class="border">
+      <h1>
+        Current weather in your beloved City
+      </h1>
+      <br />
+      <div class="container">
+								<form id="changeCity">
+										<input type="text" placeholder="Enter your city" id = "changeyourcity"/>
+										<input type = "submit" value= "Change city" >
+								</form>
+			</div>
+			<br>
+			<div class ="yourcity">
+      <h2>
+					<span class="current-city" id="city">Amsterdam</span>
+			</h2>
+			<p>
+					<span id="weekDay">Saturday</span>
+					<span id="currentTime">12:09</p></span>
+		
+				<p><span id="current-temp">10</span>°C</p>
+		</p>
+		</div>
+		<br>
+		<div class ="forecast">
+				<h2>
+					5-day forecast
+				</h2>
+				<p>
+					<div class="container">
+				<div class="row">
+					<div class="col-5">MON <i class="fas fa-cloud-sun"></i></div>
+				<div class="col-5">TUE <i class="fas fa-cloud"></i></div>
+				<div class="col-5">WED <i class="fas fa-cloud-showers-heavy"></i></div>
+				<div class="col-5">THU <i class="fas fa-cloud"></i></div>
+				<div class="col-5">FRI <i class="fas fa-cloud-showers-heavy"></i></div>
+				</div>
+				</div>
+				<div class="container">
+					<div class="row2">
+						<div class="col-5"></div>
+						<div class="col-5"></div>
+						<div class="col-5">80%</div>
+						<div class="col-5"></div>
+						<div class="col-5">50%</div>
+					</div>
+					</div>
+
+				<div class="container">
+					<div class="row3">
+						<div class="col-5"><b>2</b>°C <i class="fas fa-grip-lines"></i> <b>8</b>°C</div>
+						<div class="col-5"><b>5</b>°C <i class="fas fa-grip-lines"></i> <b>9</b>°C</div>
+						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>7</b>°C</div>
+						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>6</b>°C</div>
+						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>7</b>°C</div>
+					</div>
+					</div>
+			</p>
+		</div></div>
+      <p>
+        <br />
+        <span class="sunshine">
+					No matter the weather, always bring your own sunshine!
+					<br><br>
+					<i class="fas fa-sun"></i>
+				</span>
+			</p>
+			
+		</header>
+	</div>
+    <footer>
+      Coded by Lotte Damen-Karkera <a href="https://github.com/LotteDamenKarkera/Homework-Week-6">(Repository page)</a>
+		</footer>
+<script src="index.js"></script>
+  </body>
+</html>
