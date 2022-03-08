@@ -33,11 +33,18 @@ let changeCity = document.querySelector("#changeCity");
 changeCity.addEventListener("submit", searchCity);
 
 function currentTemperature(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#current-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
-}
+    Console.log(response.data);
+    let temperatureElement = document.queryselector("#temperature");
+    let cityElement = document.queryselector("#city");
+    let descriptionElement = document.queryselector("#description");
+    let humidityElement = document.queryselector("#humidity");
+    let windElement = document.queryselector("#speed");
+    temperatureElement.innerHTML = Math.round (response.data.main.temp);
+    cityElement.innerHTML = response.data.name;
+    descriptionElement.innerHTML = response.data.weather[0].description;
+    humidityElement.innerHTML = response.data.main.humidity;
+    windElement.innerHTML = Math.round(response.data.wind.speed);
+    }
 
 function searchCity(event) {
   event.preventDefault(event);
