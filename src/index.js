@@ -40,7 +40,7 @@ function currentTemperature(response) {
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
-    iconElement.innerHTML = `https://openweathermap.org/img/wn/01d@2x.png`
+    iconElement.setAttribute("src", `https://openweathermap.org/img/wn/01d@2x.png`);
     }
 
 function searchCity(event) {
