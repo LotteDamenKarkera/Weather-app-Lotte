@@ -18,27 +18,25 @@
       </h1>
       <br />
       <div class="container">
+		<form id="changeCity" class=""mb-3">
 		  <div class="row">
-			  <span class="col-9">
-								<form id="changeCity">
+			  <div class="col-9">
 										<input type="search" placeholder="Enter your city" class="form-control" id="city-Input" autocomplete="off"/>
-								</span>
-										<span class="col-3">
-										<input type="submit" value= "Change city" class="btn btn-primary w-100">
-								</span>
-								</form>
-								</div>
+			  </div>
+										<div class="col-3">
+										<input type="submit" value="Search" class="btn btn-primary w-100"/>
+										</div>
+									</div></form>
 			<br>
-      <h2>
+      
 		<div class ="yourcity">
-					<span id="city">Amsterdam</span>
-			</h2>
+					<h2 id="city">Amsterdam</h2>
 			<p>
 					<span class="col-6">
-						<span class="clearfix weather-temperature">
+						<div class="clearfix weather-temperature">
 							<img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Sunny" id="icon" class="float-left"/>
 					<span id="date">Wednesday 10:24</span><br>
-					<strong id="current-temp">6</span></strong>
+					<strong id="temperature">6</span></strong>
 					<span class= "units">°C | <a href="#">°F</a></span><br>
 					<span id="description">Sunny</span><br>
 					Humidity: <span id="humidity">52%</span><br>
