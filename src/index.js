@@ -1,30 +1,25 @@
-let now = new Date();
-
-let weekDays = document.querySelector("#weekDay");
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let day = days[now.getDay()];
-weekDays.innerHTML = day;
-
-let hours = now.getHours();
-if (hours < 10) {
-  hours = "0" + hours;
+function formatDate(timestamp) {
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+    if (hours < 10) {
+        hours = `0${hours}`;
+    }
+    let minutes = date.getMinutes();
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+    }
+    let days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ];
+      let day = days[date.getDay()];
+      return `${day} ${hours}:${minutes}`;
 }
-
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = "0" + minutes;
-}
-
-let time = document.querySelector("#currentTime");
-time.innerHTML = `${hours}:${minutes}`;
 
 //
 
