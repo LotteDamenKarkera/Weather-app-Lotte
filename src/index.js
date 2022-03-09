@@ -33,11 +33,14 @@ function currentTemperature(response) {
     let descriptionElement = document.queryselector("#description");
     let humidityElement = document.queryselector("#humidity");
     let windElement = document.queryselector("#speed");
+    let iconElement = document.querySelector("#icon");
     temperatureElement.innerHTML = Math.round (response.data.main.temp);
     cityElement.innerHTML = response.data.name;
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
+    dateElement.innerHTML = formatDate(response.data.dt * 1000);
+    iconElement.innerHTML = `https://openweathermap.org/img/wn/01d@2x.png`
     }
 
 function searchCity(event) {
