@@ -1,14 +1,14 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
 		<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>SheCodes</title>
 		<link rel="stylesheet" href="src/styles.css"/>
 		<script src="https://kit.fontawesome.com/5ffee6b918.js" crossorigin="anonymous"></script>
-		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-		<title>SheCodes</title>
-	</head>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
   <body>
     <header> 
 		<br>
@@ -18,31 +18,28 @@
       </h1>
       <br />
       <div class="container">
-		<form id="changeCity" class=""mb-3">
-		  <div class="row">
-			  <div class="col-9">
-										<input type="search" placeholder="Enter your city" class="form-control" id="city-Input" autocomplete="off"/>
-			  </div>
-										<div class="col-3">
-										<input type="submit" value="Search" class="btn btn-primary w-100"/>
-										</div>
-									</div></form>
+								<form id="changeCity">
+										<input type="text" placeholder="Enter your city" id = "changeyourcity"/>
+										<input type = "submit" value= "Change city" >
+								</form>
+			</div>
 			<br>
-      
-		<div class ="yourcity">
-					<h2 id="city">Amsterdam</h2>
+			<div class ="yourcity">
+      <h2>
+					<span class="current-city" id="city">Amsterdam</span>
+			</h2>
 			<p>
-					<span class="col-6">
-						<div class="clearfix weather-temperature">
-							<img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Sunny" id="icon" class="float-left"/>
-					<span id="date">Wednesday 10:24</span><br>
-					<strong id="temperature">6</span></strong>
-					<span class= "units">°C | <a href="#">°F</a></span><br>
-					<span id="description">Sunny</span><br>
-					Humidity: <span id="humidity">52%</span><br>
-					Wind: <span id="speed">18 </span>km/h</p>
+				<span class="col-6">
+					<div class="clearfix weather-temperature">
+						<img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Sunny" id="icon" class="float-left"/>
+					<span id="weekDay">Saturday</span>
+					<span id="currentTime">12:09</p></span>
+				<p><span id="current-temp">10</span>°C</p> | °F
+				<p><span id="description">Sunny</span>°C</p>
+				<p><span id="humidity">50</span>%</p>
+				<p><span id="speed">18 </span>km/h</p>
 		</p>
-	</span></span></div>
+		</div>
 		<br>
 		<div class ="forecast">
 				<h2>
@@ -91,7 +88,7 @@
 		</header>
 	</div>
     <footer>
-      Coded by Lotte Damen-Karkera <a href="https://github.com/LotteDamenKarkera/Weather-app-Lotte">(Repository page)</a>
+      Coded by Lotte Damen-Karkera <a href="https://github.com/LotteDamenKarkera/Homework-Week-6">(Repository page)</a>
 		</footer>
 <script src="src/index.js"></script>
   </body>
