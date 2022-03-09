@@ -33,7 +33,6 @@ let changeCity = document.querySelector("#changeCity");
 changeCity.addEventListener("submit", searchCity);
 
 function currentTemperature(response) {
-    Console.log(response.data);
     let temperatureElement = document.queryselector("#temperature");
     let cityElement = document.queryselector("#city");
     let descriptionElement = document.queryselector("#description");
