@@ -79,7 +79,7 @@ body {
   
   .border {
     border: 2px solid turquoise;
-    width: 450px;
+    width: 600px;
     margin: 0 auto;
     text-align: center;
     padding: 10px;
@@ -88,14 +88,14 @@ body {
   .yourcity {
     border: 2px solid purple;
     margin: 0 auto;
-    width: 250px;
+    width: 400px;
     padding: 0px 35px 0px 35px;
   }
   
   .forecast {
     border: 2px solid purple;
     margin: 0 auto;
-    width: 250px;
+    width: 400px;
     padding: 0px 35px 0px 35px;
   }
   
