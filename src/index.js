@@ -38,7 +38,7 @@ function displayForecast(){
   let days = ["Thu", "Fri", "Sat", "Sun"];
   days.forEach(function(day) {
     forecastHTML = forecastHTML + `
-  <div class="weather-forecast-day">
+  <div class="weather-forecast">
 				<div class="row">
 					<div class="col-5">${day} <i class="fas fa-cloud-sun"></i></div>
 				<div class="col-5">${day} <i class="fas fa-cloud"></i></div>
