@@ -35,20 +35,20 @@ changeCity.addEventListener("submit", searchCity);
 function displayForecast(){
   let forecastElement = document.querySelector("forecast");
   let forecastHTML = `<div class ="row">`;
-  forecastHTML = forecastHTML + `
-  <div class="container">
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function(day) {
+    forecastHTML = forecastHTML + `
+  <div class="weather-forecast-day">
 				<div class="row">
-					<div class="col-5">MON <i class="fas fa-cloud-sun"></i></div>
-				<div class="col-5">TUE <i class="fas fa-cloud"></i></div>
-				<div class="col-5">WED <i class="fas fa-cloud-showers-heavy"></i></div>
-				<div class="col-5">THU <i class="fas fa-cloud"></i></div>
-				<div class="col-5">FRI <i class="fas fa-cloud-showers-heavy"></i></div>
+					<div class="col-5">${day} <i class="fas fa-cloud-sun"></i></div>
+				<div class="col-5">${day} <i class="fas fa-cloud"></i></div>
+				<div class="col-5">${day} <i class="fas fa-cloud-showers-heavy"></i></div>
+				<div class="col-5">${day} <i class="fas fa-cloud"></i></div>
+				<div class="col-5">${day} <i class="fas fa-cloud-showers-heavy"></i></div>
 				</div>
 				</div>
-`;
-forecastHTML = forecastHTML + `
 
-				<div class="container">
+        <div class="container">
 					<div class="row2">
 						<div class="col-5"></div>
 						<div class="col-5"></div>
@@ -58,10 +58,7 @@ forecastHTML = forecastHTML + `
 					</div>
 					</div>
 
-       `;
-forecastHTML = forecastHTML + `
-
-				<div class="container">
+          <div class="container">
 					<div class="row3">
 						<div class="col-5"><b>2</b>°C <i class="fas fa-grip-lines"></i> <b>8</b>°C</div>
 						<div class="col-5"><b>5</b>°C <i class="fas fa-grip-lines"></i> <b>9</b>°C</div>
@@ -69,8 +66,8 @@ forecastHTML = forecastHTML + `
 						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>6</b>°C</div>
 						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>7</b>°C</div>
 					</div> 
-
-      `;
+`;
+  });
   forecastHTML = `</div>`
   forecastElement.innerHTML = forecastHTML;
 }
