@@ -41,18 +41,10 @@ function displayForecast(response) {
     forecastHTML = forecastHTML + `
     <div class="weather-forecast-day">
 					<div class="col-5">${day} <i class="fas fa-cloud-sun"></i></div>
-				<div class="col-5">${day} <i class="fas fa-cloud"></i></div>
-				<div class="col-5">${day} <i class="fas fa-cloud-showers-heavy"></i></div>
-				<div class="col-5">${day} <i class="fas fa-cloud"></i></div>
-				<div class="col-5">${day} <i class="fas fa-cloud-showers-heavy"></i></div>
 				</div>
 
           <div class="weather-forecast-temperature">
 						<div class="col-5"><span class="weather-forecast-temperature-min"><b>2</b>°C</span> <i class="fas fa-grip-lines"></i> <span class="weather-forecast-temperature-max"><b>8</b>°C<span></div>
-						<div class="col-5"><b>5</b>°C <i class="fas fa-grip-lines"></i> <b>9</b>°C</div>
-						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>7</b>°C</div>
-						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>6</b>°C</div>
-						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>7</b>°C</div>
 					</div> 
 `;
   });
