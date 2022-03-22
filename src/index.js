@@ -39,13 +39,14 @@ function displayForecast(response) {
   let forecastHTML = `<div class ="row">`;
   days.forEach(function(day) {
     forecastHTML = forecastHTML + `
-    <div class="weather-forecast-day">
-					<div class="col-5">${day} <i class="fas fa-cloud-sun"></i></div>
-				</div>
+    <div class="col-5">
+    <div class="weather-forecast-day">${day}</div>
+    <i class="fas fa-cloud-sun"></i>
 
           <div class="weather-forecast-temperature">
-						<div class="col-5"><span class="weather-forecast-temperature-min"><b>2</b>°C</span> <i class="fas fa-grip-lines"></i> <span class="weather-forecast-temperature-max"><b>8</b>°C<span></div>
+						<span class="weather-forecast-temperature-min"><b>2</b>°C</span> <i class="fas fa-grip-lines"></i> <span class="weather-forecast-temperature-max"><b>8</b>°C<span></div>
 					</div> 
+      </div>
 `;
   });
   forecastHTML = forecastHTML + `</div>`;
