@@ -39,17 +39,21 @@ function displayForecast(response) {
   let forecastHTML = `<div class ="row">`;
   days.forEach(function(day) {
     forecastHTML = forecastHTML + `
-    <div class="col-2">
-  <div class="weather-forecast-day">${day}</div>
-  <img src="http://openweathermap.org/img/wn/50d@2x.png"
-          alt=""
-          width="42"
-        />
-        <div class="weather-forecast-temperature">
-          <span class="weather-forecast-temperature-max">2° </span>
-          <span class="weather-forecast-temperature-min">8° </span>
-        </div>
-      </div>
+    <div class="weather-forecast-day">
+					<div class="col-5">${day} <i class="fas fa-cloud-sun"></i></div>
+				<div class="col-5">${day} <i class="fas fa-cloud"></i></div>
+				<div class="col-5">${day} <i class="fas fa-cloud-showers-heavy"></i></div>
+				<div class="col-5">${day} <i class="fas fa-cloud"></i></div>
+				<div class="col-5">${day} <i class="fas fa-cloud-showers-heavy"></i></div>
+				</div>
+
+          <div class="weather-forecast-temperature">
+						<div class="col-5"><span class="weather-forecast-temperature-min"><b>2</b>°C</span> <i class="fas fa-grip-lines"></i> <span class="weather-forecast-temperature-max"><b>8</b>°C<span></div>
+						<div class="col-5"><b>5</b>°C <i class="fas fa-grip-lines"></i> <b>9</b>°C</div>
+						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>7</b>°C</div>
+						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>6</b>°C</div>
+						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>7</b>°C</div>
+					</div> 
 `;
   });
   forecastHTML = forecastHTML + `</div>`;
