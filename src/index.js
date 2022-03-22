@@ -32,9 +32,9 @@ let searchText = document.querySelector("#changeyourcity");
 let changeCity = document.querySelector("#changeCity");
 changeCity.addEventListener("submit", searchCity);
 
-function displayForecast(response){
+function displayForecast(response) {
   console.log(response.data.daily);
-  let forecastElement = document.querySelector("forecast");
+  let forecastElement = document.querySelector("#forecast");
   let days = ["Thu", "Fri", "Sat", "Sun"];
   let forecastHTML = `<div class ="row">`;
   days.forEach(function(day) {
