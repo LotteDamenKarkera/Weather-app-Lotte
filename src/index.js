@@ -38,7 +38,7 @@ function displayForecast(){
   let days = ["Thu", "Fri", "Sat", "Sun"];
   days.forEach(function(day) {
     forecastHTML = forecastHTML + `
-  <div class="weather-forecast">
+  <div class="weather-forecast-day">
 				<div class="row">
 					<div class="col-5">${day} <i class="fas fa-cloud-sun"></i></div>
 				<div class="col-5">${day} <i class="fas fa-cloud"></i></div>
@@ -72,6 +72,10 @@ function displayForecast(){
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates){
+  console.log(coordinates)
+}
+
 function currentTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = Math.round(
@@ -85,6 +89,9 @@ function currentTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
+
 }
 
 function searchCity(event) {
