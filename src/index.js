@@ -35,32 +35,27 @@ changeCity.addEventListener("submit", searchCity);
 function displayForecast(response){
   console.log(response.data.daily);
   let forecastElement = document.querySelector("forecast");
-  let forecastHTML = `<div class ="row">`;
   let days = ["Thu", "Fri", "Sat", "Sun"];
+  let forecastHTML = `<div class ="row">`;
   days.forEach(function(day) {
     forecastHTML = forecastHTML + `
   <div class="weather-forecast-day">
-				<div class="row">
 					<div class="col-5">${day} <i class="fas fa-cloud-sun"></i></div>
 				<div class="col-5">${day} <i class="fas fa-cloud"></i></div>
 				<div class="col-5">${day} <i class="fas fa-cloud-showers-heavy"></i></div>
 				<div class="col-5">${day} <i class="fas fa-cloud"></i></div>
 				<div class="col-5">${day} <i class="fas fa-cloud-showers-heavy"></i></div>
 				</div>
-				</div>
 
-        <div class="container">
-					<div class="row2">
+        <div class="weather-forecast-humidity">
 						<div class="col-5"></div>
 						<div class="col-5"></div>
 						<div class="col-5">80%</div>
 						<div class="col-5"></div>
 						<div class="col-5">50%</div>
 					</div>
-					</div>
 
-          <div class="container">
-					<div class="row3">
+          <div class="weather-forecast-temperature">
 						<div class="col-5"><b>2</b>°C <i class="fas fa-grip-lines"></i> <b>8</b>°C</div>
 						<div class="col-5"><b>5</b>°C <i class="fas fa-grip-lines"></i> <b>9</b>°C</div>
 						<div class="col-5"><b>3</b>°C <i class="fas fa-grip-lines"></i> <b>7</b>°C</div>
@@ -69,7 +64,7 @@ function displayForecast(response){
 					</div> 
 `;
   });
-  forecastHTML = `</div>`
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
 
