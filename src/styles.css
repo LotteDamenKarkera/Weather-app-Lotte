@@ -55,7 +55,7 @@ body {
   
   .form-control {
     border: 2px solid purple;
-    padding: 2px 40px 2px 2px;
+    padding: 2px 40px;
     color: grey;
     font-size: 14px;
     margin: 0 auto;
