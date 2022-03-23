@@ -96,7 +96,7 @@ function searchCity(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector(#changeyourcity);
-  search(cityInputElement.value);
+  searchCity(cityInputElement.value);
 }
 
 let form = document.querySelector("#changeCity");
