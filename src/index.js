@@ -33,18 +33,19 @@ let changeCity = document.querySelector("#changeCity");
 changeCity.addEventListener("submit", searchCity);
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Thu", "Fri", "Sat", "Sun"];
+
   let forecastHTML = `<div class ="row">`;
-  days.forEach(function(day) {
+  forecast.forEach(function(forecastDay) {
     forecastHTML = forecastHTML + `
     <div class="col-5">
-    <div class="weather-forecast-day">${day}</div>
-    <i class="fas fa-cloud-sun"></i>
-
+    <div class="weather-forecast-day">${forecastDay.dt}}</div>
+    <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+          alt="" width="42"/>
           <div class="weather-forecast-temperature">
-						<span class="weather-forecast-temperature-min"><b>2</b>°C</span> <i class="fas fa-grip-lines"></i> <span class="weather-forecast-temperature-max"><b>8</b>°C<span></div>
+						<span class="weather-forecast-temperature-min"><b>${forecastDay.temp.min}</b>°C</span> <i class="fas fa-grip-lines"></i> 
+            <span class="weather-forecast-temperature-max"><b>${forecastDay.temp.max}</b>°C<span></div>
 					</div> 
       </div>
 `;
