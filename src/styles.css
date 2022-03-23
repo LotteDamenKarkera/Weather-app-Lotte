@@ -61,16 +61,13 @@ body {
     font-size: 14px;
     margin: 0 auto;
     text-align: left;
+    width: 40px;
   }
   
   .button:hover {
     cursor: pointer;
     background: purple;
     color: #fff;
-  }
-  
-  .form-inline {
-    text-align: center;
   }
   
   .border {
