@@ -60,9 +60,11 @@ function displayForecast(response) {
 					</div> 
       </div>
 `;
-  });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
+  }
+});
+
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates){
