@@ -87,19 +87,19 @@ function currentTemperature(response) {
 
 }
 
-function searchCity(city) {
+function search(city) {
   let apiKey = "7000e87df583f2a2518b94b8d5460599";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(currentTemperature);
 }
 
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector(#changeyourcity);
-  searchCity(cityInputElement.value);
+  search(cityInputElement.value);
 }
 
 let form = document.querySelector("#changeCity");
 form.addEventListener("submit", handleSubmit);
 
-searchCity ("Amsterdam");
+search("Amsterdam");
