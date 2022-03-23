@@ -28,12 +28,6 @@ time.innerHTML = `${hours}:${minutes}`;
 
 //
 
-let searchText = document.querySelector("#changeyourcity");
-let changeCity = document.querySelector("#changeCity");
-changeCity.addEventListener("submit", searchCity);
-
-search("Amsterdam");
-
 function formatDay(timestamp) {
 let date = new Date(timestamp * 1000);
 let day = date.getDay();
@@ -102,3 +96,9 @@ function searchCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchTextValue}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(currentTemperature);
 }
+
+let searchText = document.querySelector("#changeyourcity");
+let changeCity = document.querySelector("#changeCity");
+changeCity.addEventListener("submit", searchCity);
+
+searchCity ("Amsterdam");
