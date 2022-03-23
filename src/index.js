@@ -99,7 +99,7 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-let changeCity = document.querySelector("#changeCity");
-changeCity.addEventListener("submit", handleSubmit);
+let form = document.querySelector("#changeCity");
+form.addEventListener("submit", handleSubmit);
 
 searchCity ("Amsterdam");
