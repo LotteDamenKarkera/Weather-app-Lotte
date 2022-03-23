@@ -100,3 +100,5 @@ function searchCity(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchTextValue}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(currentTemperature);
 }
+
+search ("Amsterdam");
