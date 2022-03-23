@@ -32,20 +32,31 @@ let searchText = document.querySelector("#changeyourcity");
 let changeCity = document.querySelector("#changeCity");
 changeCity.addEventListener("submit", searchCity);
 
+function formatDay(timestamp) {
+let date = new Date(timestamp * 1000);
+let day = date.getDay();
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+return day;
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class ="row">`;
-  forecast.forEach(function(forecastDay) {
+  forecast.forEach(function(forecastDay, index) {
+    if (index < 6) {
+
     forecastHTML = forecastHTML + `
     <div class="col-5">
-    <div class="weather-forecast-day">${forecastDay.dt}}</div>
+    <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
+    ${index}
     <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
           alt="" width="42"/>
           <div class="weather-forecast-temperature">
-						<span class="weather-forecast-temperature-min"><b>${forecastDay.temp.min}</b>°C</span> <i class="fas fa-grip-lines"></i> 
-            <span class="weather-forecast-temperature-max"><b>${forecastDay.temp.max}</b>°C<span></div>
+						<span class="weather-forecast-temperature-min"><b>${Math.round(forecastDay.temp.min)}</b>°C</span> <i class="fas fa-grip-lines"></i> 
+            <span class="weather-forecast-temperature-max"><b>${Math.round(forecastDay.temp.max)}</b>°C<span></div>
 					</div> 
       </div>
 `;
