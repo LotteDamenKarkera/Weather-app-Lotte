@@ -84,7 +84,6 @@ function currentTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
-
 }
 
 function search(city) {
